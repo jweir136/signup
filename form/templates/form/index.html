@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Quant | Sign-Up</title>
+		     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<style>
+	html {
+		width:100%;
+		height:100%;
+	}
+	body {
+		width:100%;
+		height:100%;
+		margin:0;
+		font-family:"Open Sans",sans-serif;
+	}
+	.topbar {
+		width:100%;
+		height:5%;
+		z-index:-1;
+	}
+	h1 {
+		float:left;
+		font-size:250%;
+		margin-left:2.5%;
+		font-weight:normal;
+	}
+	.small-text {
+		font-size:50%;
+		font-weight:normal;
+	}
+	#home {
+		top:0px;
+		z-index:2;
+		background: url("https://i.imgur.com/O83jWml.jpg") no-repeat;
+		background-size:cover;
+		vertical-align:middle;
+		display:-ms-flexbox;
+		display:flex;
+		-webkit-box-align:center;
+		-ms-flex-align:center;
+		align-items:center;
+		min-height:100vh;
+		position:relative;
+		text-align:center;
+		width:100%;
+	}
+	.overlay {
+		top:0px;
+		z-index:2;
+		background: -webkit-linear-gradient(to right, #292E49, #536976);
+		background: linear-gradient(to right, #292E49, #536976);
+		opacity:0.9;
+		position:absolute;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+	}
+* {
+	-moz-box-sizing: border-box;
+	box-sizing:border-box;
+}
+	.name-input {
+		font-size:110%;
+		padding-top:.5%;
+		padding-bottom:.5%;
+		width:20%;
+		border-radius: 140px 140px 140px 140px;
+		padding-left:.5%;
+	}
+	.email-input {
+		padding-left:.5%;
+		font-size:110%;
+		padding-top:.5%;
+		padding-bottom:.5%;
+		width:20%;
+		border-radius:140px 140px 140px 140px;
+	}
+	input:focus {
+		outline-color:transparent;
+		outline-style:none;
+	}
+	.signup-button {
+		background:#29ca8e;
+		border:0;
+		color:white;
+		width:20%;
+		font-size:110%;
+		padding-top:.5%;
+		padding-bottom:.5%;
+		border-radius:140px 140px 140px 140px;
+	}
+	h2 {
+		text-align:center;
+		color:white;
+		font-size:220%;
+	}
+	
+	@media only screen and (max-width:750px) and (min-width:0px) {
+			.topbar {
+				width:100%;
+				height:7.5%;
+			}
+			
+			h1 {
+				font-size:200%;
+			}
+			
+			.name-input {
+				width:50%;
+				padding-top:1%;
+				padding-bottom:1%;
+				padding-left:1%;
+			}
+			
+			.email-input {
+				width:50%;
+				padding-top:1%;
+				padding-bottom:1%;
+				padding-left:1%;
+			}
+			
+			input:focus {
+				outline-color:transparent;
+				outline-style:none;
+			}
+			
+			.signup-button {
+				width:50%;
+				padding-top:1%;
+				padding-bottom:1%;
+			}
+	}
+</style>
+	</head>
+	<body>
+		<div class="topbar">
+			<h1>Quant <span class="small-text">community</span></h1>
+		</div>
+		<section id='home' style="background-position: center 0px;" data-stellar-background-ratio="0.5">
+			<div class='overlay'>
+				<table style="width:100%;height:100%;">
+					<tr style="width:100%;height:15%;">
+						<th>
+						<br/>
+						</th>
+					</tr>
+					<tr style="width:100%;height:50%;">
+						<th>
+							<form class='signup-form' method='post' action=''>
+								{% csrf_token %}
+								<h2>Join the Community</h2>
+								<br/>
+								<input class='name-input' placeholder='name' name='name'/>
+								<br/><br/>
+								<input class='email-input' placeholder='email' name='email'/>
+								<br/>
+								<br/>
+								<button class='signup-button' type='submit'>Subscribe</button>
+							</form>
+						</th>
+					</tr>
+					<tr style="width:100%;height:35%;">
+						<th><br/></th>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</body>
+</html>
